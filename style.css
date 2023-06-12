@@ -21,10 +21,12 @@ html {
 }
 
 body {
+    background-color: snow;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     padding: 0;
     margin: 0;
+    text-decoration: none;
     width: 100%;
 }
 
@@ -32,15 +34,14 @@ h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 48px;
     padding: 0;
-    margin: 12px;
+    margin: 8px;
 }
 
 h2 {
     font-family: 'Roboto Slab', serif;
     font-size: 40px;
     padding: 0;
-    padding-top: 100px;
-    margin: 0;
+    margin: 16px 0;
 }
 
 h3 {
@@ -51,16 +52,17 @@ h3 {
     text-align: center;
 }
 
-
 /* header */
 
 #header {
     align-items: center;
-    background-color: white;
-    box-shadow: 4px 4px 32px black;
+    background-color: whitesmoke;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.5);
     display: flex;
+    height: 80px;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -72,46 +74,63 @@ h3 {
 }
 
 #logo-img {
-    margin: 12px;
+    cursor: pointer;
+    margin: 8px;
     width: 48px;
 }
 
 #menu-icon {
-    margin: 20px;
+    color: black;
+    text-align: center;
+    margin: 24px;
 }
-
+#menu-icon:hover {
+    color: coral;
+    cursor: pointer;
+}
+#menu-icon:active {
+    cursor: default;
+    transform: scale(0.9);
+}
 
 /* menu */
 
 #menu {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 4px 4px 12px black;
-    padding-top: 20px;
-    position: fixed;
-    right: -195px;
-    top: 75px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transform-origin: right center;
     visibility: hidden;
 }
 
 .menu-item {
     align-items: center;
-    border-radius: 12px;
     display: flex;
     justify-content: baseline;
-    padding: 12px;
+    margin: 1px;
+    padding: 4px;
 }
-.menu-item:hover {
-    background-color: lightgray;
+.menu-item:hover * {
+    color: coral;
+    cursor: pointer;
 }
-.menu-item * {
-    margin: 12px;
+.menu-item:active {
+    cursor: default;
+    transform: scale(0.9);
 }
 .menu-item i {
-    text-align: center;
-    width: 40px;
+    align-self: center;
+    color: black;
 }
-
+.menu-item p {
+    margin: 8px;
+}
 
 /* content */
 
@@ -119,38 +138,63 @@ h3 {
     display: flex;
     flex-direction: column;
     position: static;
+    margin-top: 76px;
     width: 100%;
+}
+
+.content-div {
+    border: solid black;
+    border-width: 1px 0;
+    padding: 84px 24px;
+}
+
+#o-que-fazemos, #contacto {
+    background-color: navajowhite;
 }
 
 #showcase-item {
     align-items: center;
     background-image: url(./img/example-1.jpg);
+    border: solid black;
+    border-width: 1px 0;
     background-size: cover;
     display: flex;
-    height: auto;
+    height: calc(100vh - 76px);
     justify-content: center;
-    overflow: hidden;
     width: 100%;
 }
 
 #showcase-card {
-    background-color: lightblue;
-    margin: 128px 0px;
+    background-color: darkslategrey;
+    padding: 48px;
+    color: snow;
     width: 50%;
 }
 
-#showcase-txt {
-    background-color: white;
-    margin: 48px;
+#obras {
+    text-align: center;
 }
 
+#obras-menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#obras-menu p {
+    margin: 4px;
+}
+
+#obras-industria {
+    display: grid;
+}
 
 /* footer */
 
 #footer {
+    background-color: whitesmoke;
     display: flex;
     justify-content: space-evenly;
-    margin: 64px 0px;
+    padding: 64px 0px;
     position: static;
     width: 100%;
 }
@@ -165,40 +209,89 @@ h3 {
 #contacte div {
     align-items: center;
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    margin: 8px 0;
 }
 #contacte div * {
-    margin: 12px;
+    margin: 8px;
+}
+#contacte p {
+    text-align: right;
+    width: 175px;
+}
+#contacte i {
+    text-align: center;
+    width: 18px;
+}
+
+#links p {
+    margin: 16px;
+}
+#links p a {
+    color: black;
+    text-decoration: none;
+}
+#links p a:hover {
+    color: coral;
+    text-decoration: underline;
 }
 
 #media div {
     align-items: center;
     display: flex;
     justify-content: space-evenly;
+    padding: 8px 0;
 }
-#media div i {
-    margin-top: 32px;
+#media div a i {
+    color: black;
+    text-align: center;
+    width: 27px;
+}
+#media div a i:hover {
+    cursor: pointer;
+    transform: scale(1.1);    
+}
+#media div a i:active {
+    cursor: default;
+    transform: scale(0.9);    
 }
 
+#facebook-icon:hover {
+    color: #1877F2;
+}
+
+#linkedin-icon:hover {
+    color: #0077B5;
+}
+
+/* id */
+
+#id {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+}
 
 /* @Keyframes */
 
-@keyframes growDown {
-    0% {transform: scaleY(0);}
-    100% {transform: scaleY(1);}
+@keyframes growX {
+    0% {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
 }
 
-@keyframes shrinkUp {
-    0% {transform: scaleY(1);}
-    100% {transform: scaleY(0);}
-}
-
-@keyframes rotateRight {
-    0% {transform: rotate(0);}
-    100% {transform: rotate(180deg);}
+@keyframes shrinkX {
+    0% {transform: scaleX(1);}
+    100% {transform: scaleX(0);}
 }
 
 @keyframes rotateLeft {
-    0% {transform: rotate(180deg);}
+    0% {transform: rotate(0);}
+    100% {transform: rotate(-180deg);}
+}
+
+@keyframes rotateRight {
+    0% {transform: rotate(-180deg);}
     100% {transform: rotate(0);}
 }

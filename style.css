@@ -65,7 +65,7 @@ h3 {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #logo {
@@ -154,7 +154,7 @@ h3 {
 
 #showcase-item {
     align-items: center;
-    background-image: url(./img/example-1.jpg);
+    background-image: url(./img/background.jpg);
     border: solid black;
     border-width: 1px 0;
     background-size: cover;
@@ -185,7 +185,45 @@ h3 {
 }
 
 #obras-industria {
+    border: 2px solid black;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 500px;
+    margin: 16px auto;
+    width: 1000px;
+}
+.obras-i {
+    border: 1px solid black;
+}
+.obras-ib {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+#obras-i1 {
+    grid-row: span 2;
+}
+#obras-i1b {
+    background-image: url(./img/cs-wind.jpg);
+}
+#obras-i2 {
+    grid-column: span 2;
+}
+#obras-i2b {
+    background-image: url(./img/cgi-frielas.jpg);
+}
+#obras-i3 {
+    grid-row: span 2;
+}
+#obras-i3b {
+    background-image: url(./img/meo.jpg);
+}
+#obras-i4 {
+    grid-column: span 2;
+}
+#obras-i4b {
+    background-image: url(./img/cordex.png);
 }
 
 /* footer */
@@ -264,9 +302,9 @@ h3 {
     color: #0077B5;
 }
 
-/* id */
+/* trademark */
 
-#id {
+#trademark {
     background-color: black;
     color: whitesmoke;
     font-size: 12px;
